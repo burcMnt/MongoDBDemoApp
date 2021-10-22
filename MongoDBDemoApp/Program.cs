@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MongoDBDemoApp.Models;
+using System;
 
 namespace MongoDBDemoApp
 {
@@ -7,6 +8,7 @@ namespace MongoDBDemoApp
         static void Main(string[] args)
         {
             MongoCRUD db = new MongoCRUD("AddressBook");
+            db.InsertRecord("Users", new PersonModel() { FirstName = "Ece", LastName = "Yayal" });
             Console.ReadLine();
         }
     }
