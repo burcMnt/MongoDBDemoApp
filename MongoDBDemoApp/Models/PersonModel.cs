@@ -14,5 +14,7 @@ namespace MongoDBDemoApp.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public AddressModel PrimaryAddress { get; set; }
+        [BsonElement("dob")]
+        public DateTime DateOfBirth { get; set; }
     }
 }
